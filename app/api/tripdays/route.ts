@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from "next/server"
 import dayjs from 'dayjs'
 
 import { Trip } from "types"
-import { connectDB } from "../db/mongodb"
-import { TripDays } from "../db/models/TripDays"
+import { connectDB } from "../../db/mongodb"
+import { TripDays } from "../../db/models/TripDays"
 
 
 
@@ -24,8 +24,6 @@ export async function GET(request: NextRequest) {
 	const month2 = dateObj2.month()+1
 	const daysInMonth2 = dateObj2.daysInMonth()
 	
-	console.log(dateObj1,dateObj2)
-
 	connectDB()
 
 	const month1Exists = await TripDays.findOne({route:route,year: year1,month: month1 })

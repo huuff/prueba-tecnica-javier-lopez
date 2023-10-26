@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import styles from './page.module.css'
-import Calendar from './components/calendar'
+import Calendar from './components/calendar/calendar'
 import { TripDays } from 'types'
 
 
@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
        <h1>ROUTE: CEUTALGE </h1>
-   
+       <div className={styles.grid}>
         {
         tripDays?
         <>
@@ -33,7 +33,7 @@ export default function Home() {
         </>
         :null
         }
-   
+     </div> 
     </main>
   )
 }

@@ -1,7 +1,14 @@
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap:3rem;
-  padding: 6rem;
+  padding-block: 6rem;
   min-height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }

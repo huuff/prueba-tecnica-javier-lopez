@@ -6,16 +6,6 @@ import { TripDays } from 'types'
 
 import styles from './calendar.module.css'
 
-const dayToString = {
-    0: "Lun",
-    1: "Mar",
-    2: "Mie",
-    3: "Jue",
-    4: "Vie",
-    5: "Sab",
-    6: "Dom"
-}
-
 interface Props {
     data: TripDays
 }
@@ -34,6 +24,14 @@ export default function Calendar(props:Props) {
 
   return (
     <div className={styles.calendar_grid}>
+      <div className={styles.weekday}>Lun</div>
+      <div className={styles.weekday}>Mar</div>
+      <div className={styles.weekday}>Mier</div>
+      <div className={styles.weekday}>Jue</div>
+      <div className={styles.weekday}>Vie</div>
+      <div className={styles.weekday}>Sab</div>
+      <div className={styles.weekday}>Dom</div>
+
         {calendarDays.map((day,i)=> {
            return <div key={`${year}${month}${i}`}
             className={`${styles.calendar_day} 
