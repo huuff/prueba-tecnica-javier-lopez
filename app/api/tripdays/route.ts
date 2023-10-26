@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
 
 	const fromDate: string | null = params.get('from')
 
-	const dateObj1 = dayjs(fromDate)	// D = dia, d+1 = diasemana, M+1 = mes, y = año
+	const dateObj1 = dayjs(fromDate).add(1, "month")	// D = dia, d+1 = diasemana, M+1 = mes, y = año
 	const year1 = dateObj1.year()
 	const month1 = dateObj1.month()+1
 	const daysInMonth1 = dateObj1.daysInMonth()
@@ -33,7 +33,7 @@ export async function GET(request: NextRequest) {
 	if(!month1Exists){
 		const days = []
 		for (let i=1;i<=daysInMonth1;i++){
-			const time = `${year1}-${month1}-${i}`
+			const time = `${year1}-${month1}-${i.toString().padStart(2, "0")}`
 			console.log("checking",time)
 			const url = `https://tadpole.clickferry.app/departures?route=${route}&time=${time}`
 			const res = await fetch(url)
@@ -59,7 +59,7 @@ export async function GET(request: NextRequest) {
 	if(!month2Exists){
 		const days = []
 		for (let i=1;i<=daysInMonth2;i++){
-			const time = `${year2}-${month2}-${i}`
+			const time = `${year2}-${month2}-${i.toString().padStart(2, "0")}`
 			console.log("checking",time)
 			const url = `https://tadpole.clickferry.app/departures?route=${route}&time=${time}`
 			const res = await fetch(url)
