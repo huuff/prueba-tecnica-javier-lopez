@@ -14,7 +14,7 @@ export default function Home() {
   const [tripDays,setTripDays] = useState<Array<TripDays>|null>()
 
   useEffect(() => {
-    fetch(`/api?from=${todayString}&route=ALGECEUT`)
+    fetch(`/api/tripdays?from=${todayString}&route=ALGECEUT`)
       .then(res=>res.json())
       .then(setTripDays)
       // eslint-disable-next-line react-hooks/exhaustive-deps
