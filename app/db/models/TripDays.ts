@@ -1,5 +1,4 @@
 import { Schema, model, models } from "mongoose";
-import { DaySchema } from "./Day";
 
 export const TripDaysModel = new Schema(
   {
