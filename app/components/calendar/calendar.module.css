@@ -1,43 +1,41 @@
-
 .calendar_grid {
-    min-height:10px;
-    min-width: 10px;
-    display:grid;
-    grid-template-columns: repeat(7,50px);
-    grid-template-rows: repeat(7,50px);
-    align-items: center;
-    gap:2px;
-    padding:2px;
-    background-color: gray;
+  min-height: 10px;
+  min-width: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  grid-template-rows: repeat(7, 50px);
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  background-color: gray;
 }
 
 .calendar_day {
-    height:100%;
-    width:100%;
-    color: white;
-    background-color: #3d3d3d;
-
-    display:flex;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: #3d3d3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .calendar_day > span {
-    height:fit-content;
+  height: fit-content;
 
-    font-weight: bold;
-    font-size: 1.4rem;
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
-.weekday{
+.weekday {
   font-weight: bold;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .disabled {
-    color:gray;
-    background-color:darkgray;
+  color: gray;
+  background-color: darkgray;
 }
 .empty {
-    background-color: gray;
+  background-color: gray;
 }
